@@ -1,0 +1,5 @@
+scikit-learn
+matplotlib
+progress
+scipy==1.1.0
+tensorboard
