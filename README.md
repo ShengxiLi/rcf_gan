@@ -1,5 +1,5 @@
 # RCF-GAN
-This code is for the implementation of RCF-GAN proposed in the paper "[Reciprocal Adversarial Learning via Characteristic Functions](https://arxiv.org/abs/2006.08413)" that has been accepted as Spotlight in NeurIPS 2020. 
+This code is for the implementation of RCF-GAN proposed in the paper "[Reciprocal Adversarial Learning via Characteristic Functions](https://arxiv.org/abs/2006.08413)" that has been accepted as Spotlight in NeurIPS 2020. This repo is a simple implementation on the RCF-GAN, for the ease of understanding basics. We also provide an advanced implementation upon the BigGAN architecture at https://github.com/ShengxiLi/bigrcf_gan. A further application in the graph link prediction task can be found here https://github.com/ShengxiLi/grcf.
 
 RCF-GAN, with a reciprocal theorey, intrinsically combines an auto-encoder and GAN by only two neat modules, together with a simple yet stable training strategy:
 
@@ -15,8 +15,6 @@ What can the characteristic function control in RCF-GAN?
 
 ## Requirements
 Python, Pytorch and then ```pip install -r requirements.txt```
-
-One GPU for most cases; Two GPUs for ResNet + 128x128 image size
 
 ## How to Use
 You can run the following example command for (roughly) replicating results in the paper (due to randomness in sampling):
@@ -63,13 +61,24 @@ OR you can directly run main_xxx_xxx.py in ./main_files for each setting we used
 ## To Do
 - [x] cfgan_model.py: Add data parallel module
 
-- [ ] clean everything up and standardise code comments
+- [x] clean everything up and standardise code comments
 
 ## Terms of Use
 The code is provided for research purposes only and without any warranty. Any commercial use is prohibited.
  When using the code in your research work, you should cite the following paper:
 
-``` Shengxi Li, Zeyang Yu, Min Xiang, Danilo Mandic. Reciprocal Adversarial Learning via Characteristic Functions. arXiv preprint arXiv:2006.08413, 2020.```
+``` 
+@inproceedings{shengxi2020reciprocal,
+ author = {Li, Shengxi and Yu, Zeyang and Xiang, Min and Mandic, Danilo},
+ booktitle = {Proceedings of the Advances in Neural Information Processing Systems},
+ pages = {217--228},
+ publisher = {Curran Associates, Inc.},
+ title = {Reciprocal Adversarial Learning via Characteristic Functions},
+ volume = {33},
+ year = {2020}
+}
+
+```
 
 ## Acknowledgements
 * Our evaluation codes in ./metrics on FID and KID scores were almost fully adapted from [abdulfatir/gan-metrics-pytorch](https://github.com/abdulfatir/gan-metrics-pytorch);
