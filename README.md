@@ -5,15 +5,10 @@ RCF-GAN, with a reciprocal theorey, intrinsically combines an auto-encoder and G
 
 ![RCF-GAN](imgs/rcf-gan_structure.png)
 
-
-The RCF-GAN under the simple ResNet architecture on 128x128 images
-![RCF-GAN](imgs/results.png)
-
 The RCF-GAN under the BigGAN architecture at this repo: https://github.com/ShengxiLi/bigrcf_gan
 ![BigRCF-GAN](imgs/bigrcfgan_results.png)
 
 What can the characteristic function control in RCF-GAN?
-
 ![RCF-GAN](imgs/cf_loss.png)
 
 ## Requirements
