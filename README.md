@@ -5,9 +5,12 @@ RCF-GAN, with a reciprocal theorey, intrinsically combines an auto-encoder and G
 
 ![RCF-GAN](imgs/rcf-gan_structure.png)
 
-The RCF-GAN with ResNet on 128x128 images
 
+The RCF-GAN under the simple ResNet architecture on 128x128 images
 ![RCF-GAN](imgs/results.png)
+
+The RCF-GAN under the BigGAN architecture at this repo: https://github.com/ShengxiLi/bigrcf_gan
+![BigRCF-GAN](imgs/bigrcfgan_results.png)
 
 What can the characteristic function control in RCF-GAN?
 
@@ -21,7 +24,7 @@ You can run the following example command for (roughly) replicating results in t
 ```
 CUDA_VISIBLE_DEVICES=0 python main_parse.py --dataset cifar_train --img_size 32 --mark rcf-gan
 ```
-Results for other dataset and settings can use the following relationships:
+Results for other dataset and settings can use the following relationships (* means the default and # for the required things):
 
 | #Commands | ```--dataset```\# | ```--img_size```\# | ```--z_dim``` | ```--net_model``` | ```--epochs``` |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -33,7 +36,6 @@ Results for other dataset and settings can use the following relationships:
 | **celeba resnet 128** | celeba | 128 | 64 | resnet | 300* |
 | **lsun_bedroom resnet 128** | lsunb_train | 128 | 128* | resnet | 300* |
 
-(* means the default and \# for the required things)
 
 Other commands that you might use
 ```
@@ -80,7 +82,7 @@ The code is provided for research purposes only and without any warranty. Any co
 
 ```
 
-## Acknowledgements
+## Special Thanks
 * Our evaluation codes in ./metrics on FID and KID scores were almost fully adapted from [abdulfatir/gan-metrics-pytorch](https://github.com/abdulfatir/gan-metrics-pytorch);
 * Our ResNet.py were developed from [jalola/improved-wgan-pytorch](https://github.com/jalola/improved-wgan-pytorch/blob/master/models/wgan.py);
 * We also appreciated [igul222/improved_wgan_training](https://github.com/igul222/improved_wgan_training) for providing net structure details on ResNet structures.
